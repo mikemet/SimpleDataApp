@@ -34,11 +34,11 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.grboxAddAccount = new System.Windows.Forms.GroupBox();
-            this.lbOrderPrice = new System.Windows.Forms.Label();
-            this.lbDateOfOrder = new System.Windows.Forms.Label();
-            this.numOrderAmount = new System.Windows.Forms.NumericUpDown();
             this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.numOrderAmount = new System.Windows.Forms.NumericUpDown();
+            this.lbDateOfOrder = new System.Windows.Forms.Label();
+            this.lbOrderPrice = new System.Windows.Forms.Label();
+            this.grboxAddAccount = new System.Windows.Forms.GroupBox();
             this.btnAddFinish = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.btnAddAnotherAccount = new System.Windows.Forms.Button();
@@ -87,6 +87,7 @@
             this.btnCreateAccount.TabIndex = 5;
             this.btnCreateAccount.Text = "Создать учетную запись";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // groupBox1
             // 
@@ -101,32 +102,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Создание заказа";
             // 
-            // grboxAddAccount
+            // dtpOrderDate
             // 
-            this.grboxAddAccount.Location = new System.Drawing.Point(78, 13);
-            this.grboxAddAccount.Name = "grboxAddAccount";
-            this.grboxAddAccount.Size = new System.Drawing.Size(413, 145);
-            this.grboxAddAccount.TabIndex = 7;
-            this.grboxAddAccount.TabStop = false;
-            this.grboxAddAccount.Text = "Добавление учетной записи";
-            // 
-            // lbOrderPrice
-            // 
-            this.lbOrderPrice.AutoSize = true;
-            this.lbOrderPrice.Location = new System.Drawing.Point(21, 45);
-            this.lbOrderPrice.Name = "lbOrderPrice";
-            this.lbOrderPrice.Size = new System.Drawing.Size(117, 20);
-            this.lbOrderPrice.TabIndex = 0;
-            this.lbOrderPrice.Text = "Сумма заказа:";
-            // 
-            // lbDateOfOrder
-            // 
-            this.lbDateOfOrder.AutoSize = true;
-            this.lbDateOfOrder.Location = new System.Drawing.Point(25, 94);
-            this.lbDateOfOrder.Name = "lbDateOfOrder";
-            this.lbDateOfOrder.Size = new System.Drawing.Size(107, 20);
-            this.lbDateOfOrder.TabIndex = 1;
-            this.lbDateOfOrder.Text = "Дата заказа:";
+            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpOrderDate.Location = new System.Drawing.Point(166, 87);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpOrderDate.TabIndex = 3;
             // 
             // numOrderAmount
             // 
@@ -140,13 +122,32 @@
             this.numOrderAmount.Size = new System.Drawing.Size(120, 26);
             this.numOrderAmount.TabIndex = 2;
             // 
-            // dtpOrderDate
+            // lbDateOfOrder
             // 
-            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOrderDate.Location = new System.Drawing.Point(166, 87);
-            this.dtpOrderDate.Name = "dtpOrderDate";
-            this.dtpOrderDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpOrderDate.TabIndex = 3;
+            this.lbDateOfOrder.AutoSize = true;
+            this.lbDateOfOrder.Location = new System.Drawing.Point(25, 94);
+            this.lbDateOfOrder.Name = "lbDateOfOrder";
+            this.lbDateOfOrder.Size = new System.Drawing.Size(107, 20);
+            this.lbDateOfOrder.TabIndex = 1;
+            this.lbDateOfOrder.Text = "Дата заказа:";
+            // 
+            // lbOrderPrice
+            // 
+            this.lbOrderPrice.AutoSize = true;
+            this.lbOrderPrice.Location = new System.Drawing.Point(21, 45);
+            this.lbOrderPrice.Name = "lbOrderPrice";
+            this.lbOrderPrice.Size = new System.Drawing.Size(117, 20);
+            this.lbOrderPrice.TabIndex = 0;
+            this.lbOrderPrice.Text = "Сумма заказа:";
+            // 
+            // grboxAddAccount
+            // 
+            this.grboxAddAccount.Location = new System.Drawing.Point(78, 13);
+            this.grboxAddAccount.Name = "grboxAddAccount";
+            this.grboxAddAccount.Size = new System.Drawing.Size(413, 145);
+            this.grboxAddAccount.TabIndex = 7;
+            this.grboxAddAccount.TabStop = false;
+            this.grboxAddAccount.Text = "Добавление учетной записи";
             // 
             // btnAddFinish
             // 
@@ -156,6 +157,7 @@
             this.btnAddFinish.TabIndex = 8;
             this.btnAddFinish.Text = "Готово";
             this.btnAddFinish.UseVisualStyleBackColor = true;
+            this.btnAddFinish.Click += new System.EventHandler(this.btnAddFinish_Click);
             // 
             // btnPlaceOrder
             // 
@@ -165,6 +167,7 @@
             this.btnPlaceOrder.TabIndex = 9;
             this.btnPlaceOrder.Text = "Разместить заказ";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // btnAddAnotherAccount
             // 
@@ -174,6 +177,7 @@
             this.btnAddAnotherAccount.TabIndex = 10;
             this.btnAddAnotherAccount.Text = "Добавить другую учетную запись";
             this.btnAddAnotherAccount.UseVisualStyleBackColor = true;
+            this.btnAddAnotherAccount.Click += new System.EventHandler(this.btnAddAnotherAccount_Click);
             // 
             // NewCustomer
             // 

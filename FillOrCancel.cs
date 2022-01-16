@@ -19,6 +19,37 @@ namespace SimpleDataApp
             InitializeComponent();
         }
 
+        // Storage for the order ID value.
+        private int parsedOrderID;
+
+        /// <summary>
+        /// Verifies that an order ID is present and contains valid characters.
+        /// </summary>
+        private bool IsOrderIDValid()
+        {
+            // Check for input in the Order ID text box.
+            if (txtOrderID.Text == "")
+            {
+                MessageBox.Show("Please specify the Order ID.");
+                return false;
+            }
+
+            // Check for characters other than integers.
+            else if (Regex.IsMatch(txtOrderID.Text, @"^\D*$"))
+            {
+                // Show message and clear input.
+                MessageBox.Show("Customer ID must contain only numbers.");
+                txtOrderID.Clear();
+                return false;
+            }
+            else
+            {
+                // Convert the text in the text box to an integer to send to the database.
+                parsedOrderID = Int32.Parse(txtOrderID.Text);
+                return true;
+            }
+        }
+
         private void btnFindByOrderID_Click(object sender, EventArgs e)
         {
 

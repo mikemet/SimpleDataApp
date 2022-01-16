@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SimpleDataApp
 {
@@ -15,6 +16,26 @@ namespace SimpleDataApp
         public NewCustomer()
         {
             InitializeComponent();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddAnotherAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddFinish_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

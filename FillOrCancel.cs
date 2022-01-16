@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace SimpleDataApp
 {
@@ -15,6 +17,26 @@ namespace SimpleDataApp
         public FillOrCancel()
         {
             InitializeComponent();
+        }
+
+        private void btnFindByOrderID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFillOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFinishUpdates_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
